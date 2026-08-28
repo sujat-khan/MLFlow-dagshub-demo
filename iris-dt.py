@@ -22,7 +22,7 @@ y = iris.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Define the parameters for the Random Forest model
-max_depth = 1
+max_depth = 10
 
 # apply mlflow
 
@@ -60,7 +60,7 @@ with mlflow.start_run():
 
     mlflow.sklearn.log_model(dt, "decision tree")
 
-    mlflow.set_tag('author','nitish')
+    mlflow.set_tag('author','Sujat')
     mlflow.set_tag('model','decision tree')
 
     print('accuracy', accuracy)
